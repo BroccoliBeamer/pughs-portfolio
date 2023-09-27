@@ -1,12 +1,67 @@
-.navbar-lewagon {
+
+.pughs-navbar {
+  border: solid;
+  border-radius: 5px;
+  height: 95vh;
+  width: 69px;
+  position: fixed;
+  left: 1%;
+  top: 2%;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: center;
+  background-color: #4c715f;
+  padding: 25px 0px 30px 0px;
+
+  transition: width 0.5s;
+}
+.pughs-navbar:hover {
+  width: 15%;
+}
+.logo{
+  position: absolute;
+  top: 0;
+  background-color: #24392f;
+  width: 66px;
+  height: 60px;
+  transition: 0.5s;
+  border-radius: 3px;
+}
+.navbar-container{
+  margin-top: 60px; /* margin-top should be equal to the height of the logo */
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
   justify-content: space-between;
-  background: white;
 }
-
-.navbar-lewagon .navbar-collapse {
-  flex-grow: 0;
+.home-search, .login-signup{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-shrink: 0;
 }
+.navbar-buttons {
+  border: solid;
+  border-radius: 50px;
+  height: 50px;
+  width: 90%;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  font-size: 30px;
+  overflow: hidden;
+  white-space: nowrap;
 
-.navbar-lewagon .navbar-brand img {
-  width: 40px;
+  i{
+    margin: 0px 15px 0px 5px;
+  }
+  #user-icon{
+    margin: 0px 15px 0px 8px;
+  }
+}
+.margin-top {
+  margin-top: 10px;
 }
