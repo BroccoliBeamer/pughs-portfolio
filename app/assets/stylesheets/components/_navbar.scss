@@ -2,11 +2,11 @@
 .pughs-navbar {
   border: solid;
   border-radius: 5px;
-  height: 95vh;
+  height: 90vh;
   width: 69px;
   position: fixed;
   left: 1%;
-  top: 2%;
+  top: 5%;
   z-index: 10;
   display: flex;
   flex-direction: column;
@@ -54,6 +54,7 @@
   font-size: 30px;
   overflow: hidden;
   white-space: nowrap;
+  padding-inline: 6px;
 
   i{
     margin: 0px 15px 0px 5px;
@@ -65,3 +66,4 @@
 .margin-top {
   margin-top: 10px;
 }
+// Inexplicable bug where the navbar buttons are not centered vertically
