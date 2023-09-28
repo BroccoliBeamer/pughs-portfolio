@@ -15,10 +15,12 @@
         </button>
       </div>
       <div class="login-signup">
-        <button class="navbar-buttons">
-          <i class="fa-regular fa-user" id="user-icon"></i>
-          Login
-        </button>
+          <%# <button class="navbar-buttons"> %>
+        <%= link_to new_user_session_path, class: "navbar-buttons" do %>
+            <i class="fa-regular fa-user" id="user-icon"></i>
+            Login
+        <% end %>
+          <%# </button> %>
         <button class="navbar-buttons margin-top">
           <i class="fa-solid fa-user" id="user-icon"></i>
           Sign up
