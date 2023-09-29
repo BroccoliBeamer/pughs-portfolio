@@ -14,4 +14,11 @@ class User < ApplicationRecord
   validates :email, presence: true
 
   # validates :bio, presence: true, length: { maximum: 500 }
+
+  include PgSearch::Model
+  pg_search_scope :search_by_first_name_and_middle_name_and_last_name,
+  against: [ :first_name, :middle_name, :last_name ],
+  using: {
+    tsearch: { prefix: true }
+  }
 end
