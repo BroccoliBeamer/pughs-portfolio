@@ -5,27 +5,38 @@
     <div class="logo"></div>
     <div class="navbar-container">
       <div class="home-search">
-        <button class="navbar-buttons">
+        <%= link_to root_path, class: "navbar-buttons" do %>
           <i class="fa-solid fa-house"></i>
           Home
-        </button>
-        <button class="navbar-buttons margin-top">
+        <% end %>
+        <button type="button" class="navbar-buttons margin-top" data-bs-toggle="modal" data-bs-target="#exampleModal">
           <i class="fa-solid fa-magnifying-glass"></i>
           Search
         </button>
       </div>
       <div class="login-signup">
-          <%# <button class="navbar-buttons"> %>
         <%= link_to new_user_session_path, class: "navbar-buttons" do %>
-            <i class="fa-regular fa-user" id="user-icon"></i>
-            Login
+          <i class="fa-regular fa-user" id="user-icon"></i>
+          Login
         <% end %>
-          <%# </button> %>
-        <button class="navbar-buttons margin-top">
+        <%= link_to new_user_registration_path, class: "navbar-buttons margin-top" do %>
           <i class="fa-solid fa-user" id="user-icon"></i>
           Sign up
-        </button>
+        <% end %>
       </div>
     </div>
   </div>
 <% end %>
+
+<%# Search Bar Modal %>
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+<%# Search bar modal ends %>
