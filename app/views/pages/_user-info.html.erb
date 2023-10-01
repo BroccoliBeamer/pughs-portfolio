@@ -1,0 +1,55 @@
+<% if current_user %>
+
+<div class="user-personal-info">
+  <div class="user-profile-picture">
+    <%= image_tag current_user.profile_picture, class:"profile-picture-image" %>
+  </div>
+  <div class="user-info-container">
+    <div class="user-info-text">
+      <div class="user-name">
+        <h1 style="margin:0;"><%= current_user.first_name.downcase.capitalize %> <%= current_user.last_name.downcase.capitalize %></h1>
+      </div>
+      <div class="user-email">
+        <p style="margin:0;"><%= current_user.email %></p>
+      </div>
+      <div class="view-projects">
+        <p class="m-0">View Projects</p>
+      </div>
+    </div>
+    <div class="social-links">
+      <% if current_user.github %>
+        <a href="<%= current_user.github %>" target="_blank">
+          <i class="fab fa-github social-icons"></i>
+        </a>
+      <% end %>
+      <% if current_user.instagram %>
+        <a href="<%= current_user.instagram %>" target="_blank">
+          <i class="fab fa-instagram social-icons"></i>
+        </a>
+      <% end %>
+      <% if current_user.strava %>
+        <a href="<%= current_user.strava %>" target="_blank">
+          <i class="fab fa-strava social-icons"></i>
+        </a>
+      <% end %>
+      <% if current_user.linkedin %>
+        <a href="<%= current_user.linkedin %>" target="_blank">
+          <i class="fab fa-linkedin social-icons"></i>
+        </a>
+      <% end %>
+      <% if current_user.facebook %>
+        <a href="<%= current_user.facebook %>" target="_blank">
+          <i class="fab fa-facebook social-icons"></i>
+        </a>
+      <% end %>
+      <% if current_user.twitter %>
+        <a href="<%= current_user.twitter %>" target="_blank">
+          <i class="fab fa-twitter social-icons"></i>
+        </a>
+      <% end %>
+    </div>
+  </div>
+</div>
+<% else %>
+<h1>Hey There</h1>
+<% end %>
