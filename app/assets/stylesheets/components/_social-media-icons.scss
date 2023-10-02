@@ -1,0 +1,39 @@
+.social-links {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  font-size: 2rem;
+  width: 18rem;
+  text-decoration: none;
+  .social-icons {
+    font-size: 3rem;
+    border: solid 0.17rem black;
+    border-radius: 4px;
+    margin:0 0.5rem 0.5rem 0;
+    text-decoration: none;
+  }
+  .fa-github{
+    padding: 0.5rem 0.547rem;
+    color: black;
+  }
+  .fa-strava{
+    padding: 0.5rem 0.875rem;
+    color: #FC4C02;
+  }
+  .fa-instagram{
+    padding: 0.5rem 0.6875rem;
+    color: #E1306C;
+  }
+  .fa-linkedin{
+    padding: 0.5rem 0.6878rem;
+    color: #0077B5;
+  }
+  .fa-facebook{
+    padding: 0.5rem 0.5rem;
+    color: #3B5998;
+  }
+  .fa-twitter{
+    padding: 0.5rem 0.5rem;
+    color: #1DA1F2;
+  }
+}
