@@ -4,178 +4,81 @@
   <%= f.error_notification %>
 
   <div class="form-inputs">
+    <!-- Profile Picture -->
     <div class="pick-profile-picture" data-controller="select-avatar">
       <div class="enlarged-avatar">
-          <div class="the-avatar" data-select-avatar-target="avatar"></div>
+        <div class="the-avatar" data-select-avatar-target="avatar"></div>
       </div>
       <%= f.input :profile_picture,
                   as: :radio_buttons,
-                  input_html: {class: 'disable-avatar-text', data: {action: 'click->select-avatar#pickAvatar'}},
-                  collection:["cowboy.png",
-                              "desert.png",
-                              "thief.png",
-                              "woman.png",
-                              "fisherman.png",
-                              "hip-hop.png",
-                              "cheerleader.png",
-                              "lego-helmet.png",
-                              "lego-prof.png",
-                              "man.png",
-                              "ninja.png",
-                              "spiderman.png"],
+                  input_html: { class: 'disable-avatar-text', data: { action: 'click->select-avatar#pickAvatar' } },
+                  collection: ["cowboy.png", "desert.png", "thief.png", "woman.png", "fisherman.png", "hip-hop.png", "cheerleader.png", "lego-helmet.png", "lego-prof.png", "man.png", "ninja.png", "spiderman.png"],
                   prompt: "Pick a Profile Avatar" %>
-      </div>
     </div>
 
+    <!-- User Bio -->
+<!--<div class="user-bio-entry">
+      <%= f.input :bio, placeholder: "Bio", label: false, required: false, autofocus: true %>
+    </div> -->
 
-
-
-    <%# Name %>
-
-
-    <div class="user-bio-entry">
-      <%= f.input :bio,
-      placeholder: "Bio",
-      label: false,
-      required: false,
-      autofocus: true %>
-    </div>
-
-
+    <!-- Required Info -->
     <div class="required-info">
-      <div class="first-name-entry">
-        <%= f.input :first_name,
-        placeholder: "First Name",
-        label: false,
-        required: true,
-        autofocus: true,
-        input_html: { autocomplete: "first_name" }%>
-      </div>
-      <div class="middle-name-entry">
-        <%= f.input :middle_name,
-        placeholder: "Middle Name",
-        label: false,
-        required: false,
-        autofocus: true,
-        input_html: { autocomplete: "middle_name" }%>
-      </div>
-      <div class="last-name-entry">
-        <%= f.input :last_name,
-        placeholder: "Last Name",
-        label: false,
-        required: true,
-        autofocus: true,
-        input_html: { autocomplete: "last_name" }%>
-      </div>
-      <%# password %>
-      <div class="password-entry">
-        <%= f.input :password,
-        placeholder: "Password (6 characters minimum)",
-        label: false,
-        required: true,
-        hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
-        input_html: { autocomplete: "new-password" } %>
-      </div>
-      <div class="password-confirmation-entry">
-        <%= f.input :password_confirmation,
-        placeholder: "Confirm Password",
-        label: false,
-        required: true,
-        input_html: { autocomplete: "new-password" } %>
-      </div>
-      <%# Contact %>
-      <div class="email-entry">
-        <%= f.input :email,
-        placeholder: "Email",
-        label: false,
-        required: true,
-        autofocus: true,
-        input_html: { autocomplete: "email" }%>
-      </div>
-<%# cv entry %>
-      <div class="cv-entry">
-        <%= f.input :cv,
-        placeholder: "CV",
-        label: false,
-        required: false,
-        autofocus: true %>
-      </div>
+        <%= f.input :first_name, placeholder: "First Name", label: false, required: true, autofocus: true, input_html: { autocomplete: "first_name" } %>
+        <%= f.input :middle_name, placeholder: "Middle Name", label: false, required: false, autofocus: true, input_html: { autocomplete: "middle_name" } %>
+        <%= f.input :last_name, placeholder: "Last Name", label: false, required: true, autofocus: true, input_html: { autocomplete: "last_name" } %>
+        <%= f.input :email, placeholder: "Email", label: false, required: true, autofocus: true, input_html: { autocomplete: "email" } %>
+        <%= f.input :password, placeholder: "Password (6 characters minimum)", label: false, required: true, input_html: { autocomplete: "new-password" } %>
+        <%= f.input :password_confirmation, placeholder: "Confirm Password", label: false, required: true, input_html: { autocomplete: "new-password" } %>
     </div>
-    <%# social %>
+
+    <!-- Social Links -->
     <div class="socials-entry">
+      <!-- GitHub -->
       <div class="social-icons github">
         <i class="fa-brands fa-github"></i>
-        <%= f.input :github,
-        placeholder: "Github",
-        label: false,
-        required: false %>
+        <%= f.input :github, placeholder: "Github", label: false, required: false, input_html: { class: 'social-div-entry' } %>
       </div>
+      <!-- Instagram -->
       <div class="social-icons instagram">
         <i class="fa-brands fa-instagram"></i>
-        <%= f.input :instagram,
-        placeholder: "Instagram",
-        label: false,
-        required: false,
-        autofocus: true %>
+        <%= f.input :instagram, placeholder: "Instagram", label: false, required: false, autofocus: true, input_html: { class: 'social-div-entry' } %>
       </div>
+      <!-- LinkedIn -->
       <div class="social-icons linkedin">
         <i class="fa-brands fa-linkedin"></i>
-        <%= f.input :linkedin,
-        placeholder: "LinkedIn",
-        label: false,
-        required: false,
-        autofocus: true %>
+        <%= f.input :linkedin, placeholder: "LinkedIn", label: false, required: false, autofocus: true, input_html: { class: 'social-div-entry' } %>
       </div>
+      <!-- Twitter -->
       <div class="social-icons twitter">
         <i class="fa-brands fa-twitter"></i>
-        <%= f.input :twitter,
-        placeholder: "Twitter",
-        label: false,
-        required: false,
-        autofocus: true %>
+        <%= f.input :twitter, placeholder: "Twitter", label: false, required: false, autofocus: true, input_html: { class: 'social-div-entry' } %>
       </div>
+      <!-- Facebook -->
       <div class="social-icons facebook">
         <i class="fa-brands fa-facebook"></i>
-        <%= f.input :facebook,
-        placeholder: "Facebook",
-        label: false,
-        required: false,
-        autofocus: true %>
+        <%= f.input :facebook, placeholder: "Facebook", label: false, required: false, autofocus: true, input_html: { class: 'social-div-entry' } %>
       </div>
+      <!-- Strava -->
       <div class="social-icons strava">
         <i class="fa-brands fa-strava"></i>
-        <%= f.input :strava,
-        placeholder: "Strava",
-        label: false,
-        required: false,
-        autofocus: true %>
+        <%= f.input :strava, placeholder: "Strava", label: false, required: false, autofocus: true, input_html: { class: 'social-div-entry' } %>
       </div>
     </div>
-    <%# Favourite Stuff %>
+
+    <!-- Favorite Items -->
+    <!--
     <div class="fav-items-entry">
-      <%= f.input :favourite_book,
-      required: false,
-      autofocus: true %>
-      <%= f.input :favourite_movie,
-      required: false,
-      autofocus: true %>
-      <%= f.input :favourite_tv_show,
-      required: false,
-      autofocus: true %>
-      <%= f.input :favourite_album,
-      required: false,
-      autofocus: true %>
+      <%= f.input :favourite_book, required: false, autofocus: true %>
+      <%= f.input :favourite_movie, required: false, autofocus: true %>
+      <%= f.input :favourite_tv_show, required: false, autofocus: true %>
+      <%= f.input :favourite_album, required: false, autofocus: true %>
     </div>
+    -->
   </div>
+
   <div class="form-actions">
     <%= f.button :submit, "Sign up" %>
   </div>
 <% end %>
 
 <%= render "devise/shared/links" %>
-
-<style>
-.string{
-  margin: 0!important;
-}
-</style>
