@@ -1,211 +1,204 @@
-// .required-info{
-//   margin-top: 100%;
-// }
 .pick-profile-picture{
-  fieldset {
-    border: none;
-    margin: 0;
-    padding: 0;
+  fieldset{
+    margin: 0!important;
+
+    width: 25rem;
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: scroll;
   }
-  legend {
+  legend{
     display: none;
   }
 }
-.category-wrapper {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 1rem;
+.enlarged-avatar {
+  width: 25rem;
+  height: 25rem;
+  border: solid;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .the-avatar {
+    width: 23rem;
+    height: 23rem;
+    background-size: contain;
+    background-repeat: no-repeat;
+    border-radius: 0.4rem;
 }
-.category-item {
-  // flex: 0 0 30%;
+}
+.form-check{
+  padding: 0;
+  .radio_buttons{
+    display: none;
+    padding: 0%;
+  }
+}
+
+// Avatar Stlyings
+.form-check-label{
+  border: solid 0.1rem grey;
+  border-radius: 0.2rem;
+  width: 4rem;
+  height: 4rem;
+  font-size: 0;
+  background-size: contain;
+  background-repeat: no-repeat;
   margin-right: 1rem;
-  padding: 0.5rem;
 }
-
-.category-selector {
-  display: none;
-}
-
-.category-selector + label {
-  display: block;
-  cursor: pointer;
-  box-sizing: border-box;
-  width: 100%;
-  font-size: 0px;
-  text-align: left;
-  padding: 2rem;
-  border: 1px solid #EAEAEA;
-  border-radius: 4px;
-  background-color: white;
-}
-
-// .category-selector:checked + label {
-//   color: white !important;
-// }
-
-// // Avatar images
-
 #user_profile_picture_cheerleader_png + label {
   background-image: url("cheerleader.png");
-  background-size: contain;
-  background-repeat: no-repeat
 }
-
 #user_profile_picture_cheerleader_png:checked + label {
-  border-color: #FD1015;
+  border-color: $red;
 }
-
 #user_profile_picture_cowboy_png + label {
   background-image: url("cowboy.png");
-  background-size: contain;
-  background-repeat: no-repeat
 }
-
 #user_profile_picture_cowboy_png:checked + label {
-  border-color: #FD1015;
+  border-color: $red;
 }
+// not done
 #user_profile_picture_desert_png + label {
   background-image: url("desert.png");
-  background-size: contain;
-  background-repeat: no-repeat
 }
-
 #user_profile_picture_desert_png:checked + label {
-  border-color: #FD1015;
+  border-color: $red;
 }
 #user_profile_picture_fisherman_png + label {
   background-image: url("fisherman.png");
-  background-size: contain;
-  background-repeat: no-repeat
 }
-
 #user_profile_picture_fisherman_png:checked + label {
-  border-color: #FD1015;
+  border-color: $red;
 }
 #user_profile_picture_hip-hop_png + label {
   background-image: url("hip-hop.png");
-  background-size: contain;
-  background-repeat: no-repeat
 }
-
 #user_profile_picture_hip-hop_png:checked + label {
-  border-color: #FD1015;
+  border-color: $red;
 }
 #user_profile_picture_lego-helmet_png + label {
   background-image: url("lego-helmet.png");
-  background-size: contain;
-  background-repeat: no-repeat
 }
-
 #user_profile_picture_lego-helmet_png:checked + label {
-  border-color: #FD1015;
+  border-color: $red;
 }
 #user_profile_picture_lego-prof_png + label {
   background-image: url("lego-prof.png");
-  background-size: contain;
-  background-repeat: no-repeat
 }
-
 #user_profile_picture_lego-prof_png:checked + label {
-  border-color: #FD1015;
+  border-color: $red;
 }
 #user_profile_picture_man_png + label {
   background-image: url("man.png");
-  background-size: contain;
-  background-repeat: no-repeat
 }
-
 #user_profile_picture_man_png:checked + label {
-  border-color: #FD1015;
+  border-color: $red;
 }
 #user_profile_picture_ninja_png + label {
   background-image: url("ninja.png");
-  background-size: contain;
-  background-repeat: no-repeat
 }
-
 #user_profile_picture_ninja_png:checked + label {
-  border-color: #FD1015;
-
+  border-color: $red;
 }
 #user_profile_picture_spiderman_png + label {
   background-image: url("spiderman.png");
-  background-size: contain;
-  background-repeat: no-repeat
 }
-
 #user_profile_picture_spiderman_png:checked + label {
-  border-color: #FD1015;
-
+  border-color: $red;
 }
 #user_profile_picture_thief_png + label {
   background-image: url("thief.png");
-  background-size: contain;
-  background-repeat: no-repeat
 }
-
 #user_profile_picture_thief_png:checked + label {
-  border-color: #FD1015;
-
+  border-color: $red;
 }
 #user_profile_picture_woman_png + label {
   background-image: url("woman.png");
-  background-size: contain;
-  background-repeat: no-repeat
 }
-
 #user_profile_picture_woman_png:checked + label {
-  border-color: #FD1015;
-
-}
-
-.required-info{
-  display: grid;
-  grid-template-areas:
-    "fname mname lname"
-    "email email email"
-    "password password password"
-    "pass_confirm pass_confirm pass_confirm"
-    "CV CV .";
-  grid-gap: 1rem;
-  div{
-    margin: 0!important;
-  }
-  .form-text{
-    display: none;
-  }
-}
-.first-name-entry {
-  grid-area: fname;
-}
-.middle-name-entry {
-  grid-area: mname;
-}
-.last-name-entry {
-  grid-area: lname;
-}
-.email-entry {
-  grid-area: email;
-}
-.password-entry {
-  grid-area: password;
-}
-.password-confirmation-entry {
-  grid-area: pass_confirm;
-}
-.cv-entry {
-  grid-area: CV;
+  border-color: $red;
 }
 
 
-.social-icons{
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  .string{
-    width: 95%;
-  }
-  .fa-brands{
-    font-size: 2.5rem;
-  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.user_profile_picture_cheerleader_png {
+  background-image: url("cheerleader.png");
+  background-color: #B38CB4;
+  transition: all 0.5s ease-in-out;
+}
+.user_profile_picture_cowboy_png {
+  background-image: url("cowboy.png");
+  background-color: #B38CB4;
+  transition: all 0.5s ease-in-out;
+}
+.user_profile_picture_desert_png {
+  background-image: url("desert.png");
+  background-color: #B5B292;
+  transition: all 0.5s ease-in-out;
+}
+.user_profile_picture_fisherman_png {
+  background-image: url("fisherman.png");
+  background-color: #496F5B;;
+  transition: all 0.5s ease-in-out;
+}
+.user_profile_picture_hip-hop_png {
+  background-image: url("hip-hop.png");
+  background-color: #097167;
+  transition: all 0.5s ease-in-out;
+}
+.user_profile_picture_lego-helmet_png {
+  background-image: url("lego-helmet.png");
+  background-color: #241E4E;
+  transition: all 0.5s ease-in-out;
+}
+.user_profile_picture_lego-prof_png {
+  background-image: url("lego-prof.png");
+  background-color: #B5446E;
+  transition: all 0.5s ease-in-out;
+}
+.user_profile_picture_man_png {
+  background-image: url("man.png");
+  background-color: #B38CB4;
+  transition: all 0.5s ease-in-out;
+}
+.user_profile_picture_ninja_png {
+  background-image: url("ninja.png");
+  background-color: #B38CB4;
+  transition: all 0.5s ease-in-out;
+}
+
+.user_profile_picture_spiderman_png {
+  background-image: url("spiderman.png");
+  background-color: #B38CB4;
+  transition: all 0.5s ease-in-out;
+}
+.user_profile_picture_thief_png {
+  background-image: url("thief.png");
+  background-color: #B38CB4;
+  transition: all 0.5s ease-in-out;
+}
+.user_profile_picture_woman_png {
+  background-image: url("woman.png");
+  background-color: #B38CB4;
+  transition: all 0.5s ease-in-out;
+}
+.transition{
+  transition: all 0.5s ease-in-out;
 }

@@ -4,33 +4,27 @@
   <%= f.error_notification %>
 
   <div class="form-inputs">
-    <div class="pick-profile-picture">
+    <div class="pick-profile-picture" data-controller="select-avatar">
+      <div class="enlarged-avatar">
+          <div class="the-avatar" data-select-avatar-target="avatar"></div>
+      </div>
       <%= f.input :profile_picture,
-      as: :radio_buttons,
-      label: false,
-      collection_wrapper_tag: 'div',
-      collection_wrapper_class: 'category-wrapper',
-      item_wrapper_class: 'category-item',
-      input_html: {class: 'category-selector'},
-      collection:["cowboy.png",
-      "desert.png",
-      "thief.png",
-      "woman.png",
-      "fisherman.png",
-      "hip-hop.png",
-      "cheerleader.png",
-      "lego-helmet.png",
-      "lego-prof.png",
-      "man.png",
-      "ninja.png",
-      "spiderman.png"] %>
-    <div class="user-bio-entry">
-      <%= f.input :bio,
-      placeholder: "Bio",
-      label: false,
-      required: false,
-      autofocus: true %>
-    </div>
+                  as: :radio_buttons,
+                  input_html: {class: 'disable-avatar-text', data: {action: 'click->select-avatar#pickAvatar'}},
+                  collection:["cowboy.png",
+                              "desert.png",
+                              "thief.png",
+                              "woman.png",
+                              "fisherman.png",
+                              "hip-hop.png",
+                              "cheerleader.png",
+                              "lego-helmet.png",
+                              "lego-prof.png",
+                              "man.png",
+                              "ninja.png",
+                              "spiderman.png"],
+                  prompt: "Pick a Profile Avatar" %>
+      </div>
     </div>
 
 
@@ -39,6 +33,13 @@
     <%# Name %>
 
 
+    <div class="user-bio-entry">
+      <%= f.input :bio,
+      placeholder: "Bio",
+      label: false,
+      required: false,
+      autofocus: true %>
+    </div>
 
 
     <div class="required-info">
